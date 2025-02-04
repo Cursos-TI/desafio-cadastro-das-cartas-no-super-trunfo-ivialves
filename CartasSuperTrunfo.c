@@ -10,7 +10,7 @@ int main() {
     // Sugestão: Defina variáveis separadas para cada atributo da cidade.
     // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
     char name1[50], name2[50];
-    float population1, population2, pib1, pib2, area1, area2;
+    float population1, population2, pib1, pib2, area1, area2, densi1, densi2, ppc1, ppc2;re
     int tourism1, tourism2;
     // Cadastro das Cartas:
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
@@ -51,10 +51,14 @@ int main() {
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
+    densi1 = population1 / area1;
+    densi2 = population2 / area2;
+    ppc1 = pib1 / population1;
+    ppc2 = pib2 / population2;
 
     printf("Estas foram as cartas cadastradas:\n");
-    printf("Carta1: \n Nome: %s\n População: %.2f \n Área: %.2f \n PIB: %.2f \n Número de pontos turísticos: %d \n", name1, population1, area1, pib1, tourism1);
-    printf("Carta2: \n Nome: %s \n População: %.2f \n Área: %.2f \n PIB: %.2f \n Número de pontos turísticos: %d", name2, population2, area2, pib2, tourism2);
+    printf("Carta1: \n Nome: %s\n População: %.2f \n Área: %.2f \n PIB: %.2f \n Número de pontos turísticos: %d \n Densidade Populacional: %.2f \n PIB per Capita %.2f \n", name1, population1, area1, pib1, tourism1, densi1, ppc1);
+    printf("Carta2: \n Nome: %s \n População: %.2f \n Área: %.2f \n PIB: %.2f \n Número de pontos turísticos: %d \n Densidade Populacional %.2f \n PIB per Capita %.2f", name2, population2, area2, pib2, tourism2, densi2, ppc2);
 
     return 0;
 }
